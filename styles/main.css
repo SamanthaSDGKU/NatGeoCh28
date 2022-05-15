@@ -38,6 +38,15 @@ p.read-btn{
     margin-left: auto;
     margin-right:auto;
 }
+@media(min-width:768px){
+    .container{
+        width:75%;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
 /*nav*/
 .navigation-bar{
     display: flex;
@@ -47,8 +56,8 @@ p.read-btn{
     background-color: white;
 }
 .menu{
-    flex-basis: 250px;
     display: flex;
+    flex-basis: 250px;
     justify-content: space-between;
     align-items: center;
 }
@@ -77,14 +86,6 @@ p.read-btn{
     padding:15px;
 }
 
-.link-renew{
-    font-weight: normal;
-    text-transform: capitalize;
-    border-bottom: 2px solid var(--primary);
-    background-size: 100% 200%;
-    background-image:linear-gradient(to bottom, #fff 50%, var(--primary) 50%);
-    transition: background-position .2s ease-in-out, color .2s ease-in-out;
-}
 
 .link-subs{
     background-size: 200% 100%;
@@ -109,6 +110,45 @@ p.read-btn{
     margin-right: 20px;
 }
 
+@media(min-width:768px){
+    .menu{
+        flex-basis: 450px;
+    }
+    .ng-logo,.link-search,.link-renew,.link-menu{
+        display:block;
+    }
+    .ng-logo-border{
+        display: none;
+    }
+    .ng-logo{
+        width:110px;
+        margin-left: 20px;
+    }
+    .link-search{
+        color:black;
+    }
+    .link-renew{
+        color:black;
+        font-weight: normal;
+        text-transform: capitalize;
+        border-bottom: 2px solid var(--primary);
+        background-size: 100% 200%;
+        background-image:linear-gradient(to bottom, #fff 50%, var(--primary) 50%);
+        transition: background-position .2s ease-in-out, color .2s ease-in-out;
+    }
+    .link-renew:hover{
+        background-position: 0 100%;
+        color:black;
+        cursor:pointer;
+    }
+    .link-menu{
+        text-transform: uppercase;
+        font-size: 15px;
+        color:black;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+}
 /*header*/
 header{
     color:white;
@@ -117,11 +157,6 @@ header{
 h1{
     text-transform: uppercase;
 }
-.border{
-    border-bottom:
-    widt
-}
-
 .subs-word{
     border-bottom:2px solid var(--primary);
     background-size: 100% 200%;
@@ -133,6 +168,9 @@ h1{
     color:black;
     cursor:pointer;
 }
+@media(min-width:768px){
+
+}
 /* .subs-word:hover::before{
     content: "This is a fancy orange box.";
   background-color: #FFBA10;
@@ -141,6 +179,8 @@ h1{
 } */
 
 /*main-news*/
+
+
 .main-news{
     position:relative;/*the parent should be 
     relative*/
@@ -167,15 +207,14 @@ h1{
     color:white;
 }
 
+
 /*secondary-news*/
 
 .secondary-news{
 margin-bottom:20px;
 }
 
-.secondary-news-img{
 
-}
 .secondary-news-text{
     background-color: white;
     padding:10px;
@@ -191,6 +230,24 @@ margin-bottom:20px;
 .secondary-news-text p.title{
     font-size: 24px;
     font-weight: 700; 
+}
+@media(min-width:768px){
+    .secondary-news-container{
+        display: flex;
+        justify-content: space-between;
+        width:40rem;
+    }
+    .secondary-news{
+        width:calc(50% - 1rem);
+        height: 25rem;
+    }
+    .main-news{
+        width:100%;
+    }
+    .secondary-news-img img{
+        width:100%;
+        height: 12rem;
+    }
 }
 
 /*todays picks*/
